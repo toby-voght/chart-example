@@ -29,8 +29,11 @@ var line = d3.svg.line()
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    .attr("class", "chart")
+    .attr("id", "apple-stock-chart")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr(class= "chart", id = "apple-stock-chart")
 
 d3.tsv("data.tsv", function(error, data) {
   if (error) throw error;
